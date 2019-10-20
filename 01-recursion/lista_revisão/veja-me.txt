@@ -1,0 +1,21 @@
+void exibe (int v[],int tam){
+	printf("Inicio exibi\n");
+	if(tam > 0){
+		printf("%d",v[tam-1]);//  === > INICIO EXIBE T = 5,INICIO EXIBE ; T = 4,INICIO EXIBE ; T = 3,INICIO EXIBE ; T = 2 ... ASSIM SUCESSIVAMENTE
+		exibi(v,tam-1);
+	}
+
+}
+// ELE VAI DECREMENTADO E EXIBINDO SIMULTANEAMENTE, ATÉ A CONDIÇÃO SE TORNA FALSE
+------------------------------------------
+void exibe (int v[],int tam){
+	printf("Inicio exibi\n");
+	if(tam > 0){
+		exibi(v,tam-1);//INDICE DO VETOR   5		4		3	  2		1		0(FALSE)
+		printf("%d",v[tam-1]); //=== > INICIO EXIBE, INICIO EXIBE, INICIO EXIBE, INICIO EXIBE, INICIO EXIBE, INICIO EXIBE 
+			// E AGORA VOLTA PRINTADO 1 - 2 - 3 - 4 - 5...	
+	}
+
+}
+//
+------------------------------------------
